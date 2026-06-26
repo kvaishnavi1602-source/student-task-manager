@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+<div class="container">
+    <h1>Student Task Manager</h1>
+
+    <div class="stats">
+        <span id="totalTasks">Total Tasks: 0</span>
+        <span id="completedTasks">Completed: 0</span>
+        <span id="pendingTasks">Pending: 0</span>
+    </div>
+
+    <div class="controls">
+        <input type="text" id="searchInput" placeholder="Search tasks...">
+        <button id="sortPriorityBtn">Sort by Priority</button>
+        <button id="sortDateBtn">Sort by Due Date</button>
+    </div>
+
+    <div class="add-task-form">
+        <input type="text" id="taskInput" placeholder="Enter a new task (e.g., Complete Java Assignment)">
+        <select id="priorityInput">
+            <option value="High">🔴 High</option>
+            <option value="Medium" selected>🟡 Medium</option>
+            <option value="Low">🟢 Low</option>
+        </select>
+        <input type="date" id="dateInput">
+        <button id="addTaskBtn">Add Task</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <button id="clearCompletedBtn" class="btn-clear">Clear Completed Tasks</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

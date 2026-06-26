@@ -1,0 +1,154 @@
+/* CSS Styling */
+        :root {
+            --bg-color: #F0F8FF;
+            --container-bg: #ffffff;
+            --text-main: #333;
+            --text-muted: #888;
+            --border-color: #4682B4;
+            --primary-btn: #5491a7;
+            --danger-btn: #2d2d97;
+            --edit-btn: #4169E1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
+            margin: 0;
+        }
+
+        .container {
+            background-color: var(--container-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 800px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        /* Statistics */
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            background-color: #e9ecef;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Controls (Search & Sort) */
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .controls input {
+            flex-grow: 1;
+        }
+
+        /* Add Task Form */
+        .add-task-form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        input[type="text"], input[type="date"], select {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .add-task-form input[type="text"] {
+            flex-grow: 1;
+            min-width: 200px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+            background-color: var(--primary-btn);
+            transition: background 0.2s;
+        }
+
+        button:hover { opacity: 0.9; }
+        
+        .btn-delete { background-color: var(--danger-btn); }
+        .btn-edit { background-color: var(--edit-btn); color: black; }
+        .btn-clear { background-color: var(--text-muted); width: 100%; margin-top: 1rem; }
+
+        /* Task List */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            margin-bottom: 10px;
+            gap: 15px;
+            background-color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        li.completed {
+            background-color: #f8f9fa;
+        }
+
+        li.completed .task-text {
+            text-decoration: line-through;
+            color: var(--text-muted);
+        }
+
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .task-text {
+            flex-grow: 1;
+            font-size: 1.1rem;
+            word-break: break-word;
+            font-family: 'Georgia', serif;
+        }
+
+        .task-date {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Priority Badges */
+        .priority-badge {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: white;
+            white-space: nowrap;
+        }
+
+        .priority-High { background-color: #e75866; } /* Red */
+        .priority-Medium { background-color: #f4e863; color: black; } /* Yellow */
+        .priority-Low { background-color: #5ad777; } /* Green */
